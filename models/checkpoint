@@ -1,0 +1,2 @@
+model_checkpoint_path: "quantized_DNN_affine_BN_bits_10_int_5"
+all_model_checkpoint_paths: "quantized_DNN_affine_BN_bits_10_int_5"
