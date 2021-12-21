@@ -4,7 +4,6 @@ from nn_evaluate import huber_loss
 from nn_training import train_model
 from nn_build_pruning_model import CustomModel
 
-
 def generate_pruning_mask(k_weights, k_sparsity):
     """
     Takes in matrix of kernel weights (for a dense
@@ -16,7 +15,7 @@ def generate_pruning_mask(k_weights, k_sparsity):
       kernel_weights_mask: sparse matrix with same shape as the original
         kernel weight matrix
     """
-    # Copy the kernel weights and get ranked indeces of the abs
+    # Copy the kernel weights and get ranked indices of the abs
     kernel_weights_mask = np.ones (shape=k_weights.shape)
     ind = np.unravel_index (
         np.argsort (

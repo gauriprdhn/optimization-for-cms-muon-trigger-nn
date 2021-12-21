@@ -1,0 +1,181 @@
+2021-12-17 10:25:12,078 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 10:25:12,080 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 10:26:05,814 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 10:26:15,339 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 10:26:15,340 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 10:26:26,339 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 10:26:26,341 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 10:26:26,721 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2021-12-17 10:26:26,722 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2021-12-17 10:26:26,722 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2021-12-17 10:26:26,722 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2021-12-17 10:26:26,723 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2021-12-17 10:28:04,123 [INFO    ] # of entries: 1034656, mean: 0.045010348885090645, std: 0.18048872197789562
+2021-12-17 10:28:04,132 [INFO    ] gaus fit (a, mu, sig): [5.92875735e+04 2.21657382e-03 2.27184798e-01]
+2021-12-17 10:28:04,306 [INFO    ] # of entries: 150737, mean: 0.03444883406136613, std: 9.962341773758453
+2021-12-17 10:28:04,307 [INFO    ] gaus fit (a, mu, sig): [ 1.02629010e+04 -3.14000466e-02  5.23681879e+00]
+2021-12-17 10:29:33,491 [INFO    ] Begin training ...
+2021-12-17 11:09:57,805 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:09:57,807 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:17:43,757 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:17:43,760 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:18:39,483 [INFO    ] Loading muon data from data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:18:39,485 [ERROR   ] Failed to load data from file: data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:18:52,184 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:18:52,186 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:20:25,106 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:20:25,107 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:21:38,503 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:21:38,513 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:22:46,364 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:22:46,365 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:23:43,068 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:23:43,069 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:23:44,997 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:23:44,998 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:23:50,664 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:23:50,667 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:24:01,934 [INFO    ] Loading muon data from /data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:24:01,935 [ERROR   ] Failed to load data from file: /data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:24:25,847 [INFO    ] Loading muon data from /data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:24:25,847 [ERROR   ] Failed to load data from file: /data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:24:35,788 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:24:35,788 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:25:19,891 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:25:29,620 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 11:25:29,628 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 11:25:40,390 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:25:40,392 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:25:41,000 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 11:25:41,002 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 11:25:41,377 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2021-12-17 11:25:41,378 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2021-12-17 11:25:41,378 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2021-12-17 11:25:41,378 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2021-12-17 11:25:41,379 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2021-12-17 11:25:53,156 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:25:53,157 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:26:46,516 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:26:46,518 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:28:02,034 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:28:05,263 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz
+2021-12-17 11:28:16,138 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:28:25,374 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 11:28:25,376 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 11:28:36,660 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 11:28:36,662 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 11:28:58,981 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 11:29:08,816 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 11:29:08,818 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 11:29:20,046 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 11:29:20,048 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 11:31:42,541 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2021-12-17 11:31:42,571 [INFO    ] gaus fit (a, mu, sig): [1.72080926e+05 6.53609836e-03 2.50802381e-01]
+2021-12-17 11:31:42,779 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 11:31:42,781 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:00:09,214 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-nn-for-cms-muon-trigger/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 12:00:18,943 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 12:00:18,946 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 12:00:30,250 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 12:00:30,253 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 12:00:35,102 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2021-12-17 12:00:35,140 [INFO    ] gaus fit (a, mu, sig): [4.25927924e+05 6.45943971e-03 2.54454784e-01]
+2021-12-17 12:00:35,318 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:00:35,320 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:04:06,298 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2021-12-17 12:04:06,319 [INFO    ] gaus fit (a, mu, sig): [1.72080926e+05 6.53609836e-03 2.50802381e-01]
+2021-12-17 12:04:06,432 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:04:06,434 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:07:10,759 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2021-12-17 12:07:10,777 [INFO    ] gaus fit (a, mu, sig): [1.72080926e+05 6.53609836e-03 2.50802381e-01]
+2021-12-17 12:07:10,885 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:07:10,887 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:07:54,467 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2021-12-17 12:07:54,491 [INFO    ] gaus fit (a, mu, sig): [1.72080926e+05 6.53609836e-03 2.50802381e-01]
+2021-12-17 12:07:54,598 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:07:54,600 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:08:20,748 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2021-12-17 12:08:20,768 [INFO    ] gaus fit (a, mu, sig): [1.72080926e+05 6.53609836e-03 2.50802381e-01]
+2021-12-17 12:08:20,858 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:08:20,860 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:09:40,394 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:09:59,893 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:09:59,924 [INFO    ] gaus fit (a, mu, sig): [8.62584424e+05 1.55114110e-01 9.86664443e-01]
+2021-12-17 12:10:00,008 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:10:00,011 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:10:10,303 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:10:10,333 [INFO    ] gaus fit (a, mu, sig): [3.87849759e+05 1.22471940e-01 8.27277877e-01]
+2021-12-17 12:10:10,429 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:10:10,431 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:10:22,685 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:10:22,713 [INFO    ] gaus fit (a, mu, sig): [1.58413864e+06 5.00055133e-01 2.76490373e+00]
+2021-12-17 12:10:22,797 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:10:22,800 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:21:08,195 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:21:08,223 [INFO    ] gaus fit (a, mu, sig): [1.23200885e+06 2.78069470e-01 1.58651564e+00]
+2021-12-17 12:21:08,447 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:21:08,449 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2021-12-17 12:21:38,968 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:21:38,992 [INFO    ] gaus fit (a, mu, sig): [1.23200885e+06 2.78069470e-01 1.58651564e+00]
+2021-12-17 12:21:39,075 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:21:39,076 [INFO    ] gaus fit (a, mu, sig): [ 2.39533235e+05 -2.43116552e-01  7.63757357e+00]
+2021-12-17 12:22:05,576 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:22:05,602 [INFO    ] gaus fit (a, mu, sig): [1.23200885e+06 2.78069470e-01 1.58651564e+00]
+2021-12-17 12:22:05,688 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:22:05,690 [INFO    ] gaus fit (a, mu, sig): [ 1.14404487e+05 -1.89771162e-01  6.07401085e+00]
+2021-12-17 12:22:17,148 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:22:17,173 [INFO    ] gaus fit (a, mu, sig): [1.23200885e+06 2.78069470e-01 1.58651564e+00]
+2021-12-17 12:22:17,256 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:22:17,258 [INFO    ] gaus fit (a, mu, sig): [ 5.82350866e+04 -1.91705768e-01  5.94131236e+00]
+2021-12-17 12:25:18,358 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:25:18,387 [INFO    ] gaus fit (a, mu, sig): [ 2.41766000e+06 -9.53704177e+00  6.99594078e-01]
+2021-12-17 12:25:18,477 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:25:18,479 [INFO    ] gaus fit (a, mu, sig): [ 5.82350866e+04 -1.91705768e-01  5.94131236e+00]
+2021-12-17 12:25:37,037 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:25:37,063 [INFO    ] gaus fit (a, mu, sig): [2.10172671e+06 8.57751356e-01 5.66402947e+00]
+2021-12-17 12:25:37,146 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:25:37,148 [INFO    ] gaus fit (a, mu, sig): [ 5.82350866e+04 -1.91705768e-01  5.94131236e+00]
+2021-12-17 12:25:42,146 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:25:42,174 [INFO    ] gaus fit (a, mu, sig): [2.10172671e+06 8.57751356e-01 5.66402947e+00]
+2021-12-17 12:25:42,286 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:25:42,288 [INFO    ] gaus fit (a, mu, sig): [ 5.82350866e+04 -1.91705768e-01  5.94131236e+00]
+2021-12-17 12:26:09,772 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:26:09,800 [INFO    ] gaus fit (a, mu, sig): [ 1.27903407e+06  1.91970617e-01 -1.00368200e+00]
+2021-12-17 12:26:09,900 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:26:09,902 [INFO    ] gaus fit (a, mu, sig): [ 5.82350866e+04 -1.91705768e-01  5.94131236e+00]
+2021-12-17 12:26:27,991 [INFO    ] # of entries: 3284620, mean: -8.779772803199764, std: 0.22306231313131175
+2021-12-17 12:26:28,024 [INFO    ] gaus fit (a, mu, sig): [1.23200885e+06 2.78069470e-01 1.58651564e+00]
+2021-12-17 12:26:28,123 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2021-12-17 12:26:28,125 [INFO    ] gaus fit (a, mu, sig): [ 5.82350866e+04 -1.91705768e-01  5.94131236e+00]
+2021-12-17 17:02:58,355 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-for-cms-muon-trigger-nn/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 17:03:07,965 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 17:03:07,967 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 17:03:19,219 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 17:03:19,221 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 17:03:19,602 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2021-12-17 17:03:19,602 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2021-12-17 17:03:19,602 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2021-12-17 17:03:19,603 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2021-12-17 17:03:19,603 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2021-12-17 17:03:46,989 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-for-cms-muon-trigger-nn/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 17:03:56,293 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 17:03:56,294 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 17:04:07,675 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 17:04:07,678 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 17:04:08,059 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2021-12-17 17:04:08,059 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2021-12-17 17:04:08,059 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2021-12-17 17:04:08,060 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2021-12-17 17:04:08,060 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2021-12-17 17:08:24,264 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-for-cms-muon-trigger-nn/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 17:08:27,318 [ERROR   ] Failed to load data from file: /Users/gpradhan/Desktop/optimization-for-cms-muon-trigger-nn/data/NN_input_params_FlatXYZ.npz
+2021-12-17 17:08:56,169 [INFO    ] Loading muon data from /Users/gpradhan/Desktop/optimization-for-cms-muon-trigger-nn/data/NN_input_params_FlatXYZ.npz ...
+2021-12-17 17:09:05,498 [INFO    ] Loaded the variables with shape (19300000, 25)
+2021-12-17 17:09:05,499 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2021-12-17 17:09:16,830 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2021-12-17 17:09:16,836 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2021-12-17 17:09:17,238 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2021-12-17 17:09:17,238 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2021-12-17 17:09:17,238 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2021-12-17 17:09:17,238 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2021-12-17 17:09:17,239 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128

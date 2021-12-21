@@ -23,10 +23,10 @@ features = ["dphi_1", "dphi_2", "dphi_3", "dphi_4", "dphi_5", "dphi_6",
 ft_params = [
     {
         "lr": 1e-4,
-        "clipnorm": 10.,
+        "clipnorm": 100.,
         "eps": 1e-4,
         "momentum": 0.9,
-        "epochs": 60,
+        "epochs": 50,
         "batch_size": 1000,
         "l1_reg": 0.0,
         "l2_reg": 0.0
@@ -48,8 +48,8 @@ ft_params = [
         "clipnorm": 10.,
         "eps": 1e-4,
         "momentum": 0.9,
-        "epochs": 75,
-        "batch_size": 800,
+        "epochs": 100,
+        "batch_size": 1000,
         "l1_reg": 0.0,
         "l2_reg": 0.0
     },
@@ -59,8 +59,8 @@ ft_params = [
         "clipnorm": 10.,
         "eps": 1e-4,
         "momentum": 0.9,
-        "epochs": 100,
-        "batch_size": 800,
+        "epochs": 125,
+        "batch_size": 1000,
         "l1_reg": 0.0,
         "l2_reg": 0.0
     },
@@ -70,7 +70,7 @@ ft_params = [
         "clipnorm": 10.,
         "eps": 1e-4,
         "momentum": 0.9,
-        "epochs": 125,
+        "epochs": 150,
         "batch_size": 750,
         "l1_reg": 0.0,
         "l2_reg": 0.0
@@ -92,7 +92,7 @@ ft_params = [
         "clipnorm": 0.,
         "eps": 1e-4,
         "momentum": 0.9,
-        "epochs": 350,
+        "epochs": 400,
         "batch_size": 750,
         "l1_reg": 0.0,
         "l2_reg": 0.0
@@ -102,8 +102,8 @@ ft_params = [
         "clipnorm": 0.,
         "eps": 1e-4,
         "momentum": 0.9,
-        "epochs": 400,
-        "batch_size": 700,
+        "epochs": 500,
+        "batch_size": 750,
         "l1_reg": 0.0,
         "l2_reg": 0.0
     }
