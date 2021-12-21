@@ -37,33 +37,7 @@ def saving_pruned_model(model,
     model.save_weights(filepath + "/" + model_filename + "_weights.h5")
     print("Saved model to disk")
 
-def loading_trained_model(filepath='', model_filename='model'):
-    """
-    Helper function to load the trained models (NOT USING THE CUSTOM LAYER) from the models directory.
-    Args:
-        filepath: Path to the folder/ directory where the model is stored
-        model_filename: Name of the file.
-
-    Returns:
-        loaded_model: Keras Model loaded from the file.
-    """
-    try:
-        model_path = filepath + "/" + model_filename + ".json"
-        model_weights_path = filepath + "/" + model_filename + "_weights.h5"
-        with open(model_path, 'r') as f:
-            json_model_file = f.read()
-        f.close()
-        loaded_model = model_from_json(json_model_file)
-        # load weights into new model
-        loaded_model.load_weights(model_weights_path)
-        print("Loaded model from disk")
-
-        return loaded_model
-
-    except:
-        print("ERROR: The model doesn't exist at the address {}".format(model_path))
-
-def loading_pruned_model(filepath='',
+def loading_trained_model(filepath='',
                          model_filename='model',
                          custom_objects=None):
     """
@@ -84,10 +58,15 @@ def loading_pruned_model(filepath='',
         with open(model_path, 'r') as f:
             loaded_model_json = f.read()
         f.close()
-        with custom_object_scope(custom_objects):
-            loaded_model = model_from_json(loaded_model_json)
-        # load weights into new model
-        loaded_model.load_weights(model_weights_path)
+        if custom_objects:
+            with custom_object_scope(custom_objects):
+                loaded_model = model_from_json(loaded_model_json)
+            # load weights into new model
+            loaded_model.load_weights(model_weights_path)
+        else:
+            loaded_model = model_from_json (loaded_model_json)
+            # load weights into new model
+            loaded_model.load_weights (model_weights_path)
         print("Loaded model from disk")
 
         return loaded_model
