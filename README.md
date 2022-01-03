@@ -9,3 +9,8 @@ To install the library run the following steps from your terminal:
 2. `cd` to the directory where `setup.py` is present on the local system.
 3. Run `python3 setup.py install` to install the necessary backups and scripts as a package.
 ***
+
+Present folders hold files pertaining to the project:
+
+ 1. models : The `.json` and `.h5py` files for trained [and pruned] models for model config and weights respectively.
+ 2. baseline_checkpoints: Checkpoints to assess model weights during training. Used to store the checkpoints while emulating the training of the baseline.
