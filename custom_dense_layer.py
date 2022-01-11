@@ -1,5 +1,4 @@
 from keras import backend as K
-# from tensorflow.python.framework import tensor_shape
 from keras.engine.base_layer import Layer
 from keras.engine import base_layer_utils
 from keras import initializers, regularizers, activations
@@ -38,11 +37,11 @@ class MaskedDense(Layer):
         config = {
             'num_outputs': self.num_outputs,
             'mask': self.layer_mask.numpy(),
-            'kernel_initializer': self.kernel_initializer,
-            'bias_initializer': self.bias_initializer,
-            'kernel_regularizer': self.kernel_regularizer,
-            'bias_regularizer': self.bias_regularizer,
-            'activation': self.activation
+            'kernel_initializer': initializers.serialize(self.kernel_initializer),
+            'bias_initializer': initializers.serialize(self.bias_initializer),
+            'kernel_regularizer': regularizers.serialize(self.kernel_regularizer),
+            'bias_regularizer': regularizers.serialize(self.bias_regularizer),
+            'activation': activations.serialize(self.activation)
         }
         base_config = super(MaskedDense, self).get_config()
         return dict(list(base_config.items()) + list(config.items()))

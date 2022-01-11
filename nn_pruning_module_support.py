@@ -1,33 +1,27 @@
 import numpy as np
 import pandas as pd
-from nn_globals import *
 import matplotlib.pyplot as plt
-from nn_plotting import gaus, fit_gaus
 from keras.models import  model_from_json
 from tensorflow.keras.utils import custom_object_scope
 
 # global variables
-#plt.style.use('tdrstyle.mplstyle')
+# plt.style.use('tdrstyle.mplstyle')
 eps = 1e-7
 my_cmap = plt.cm.viridis
 my_cmap.set_under('w',1)
 my_palette = ("#377eb8", "#e41a1c", "#984ea3", "#ff7f00", "#4daf4a")
 
-def saving_pruned_model(model,
-                        filepath='',
-                        model_filename='model'):
+def saving_model(model,
+                 filepath:str ='',
+                 model_filename:str ='model'):
     """
-
     Helper function to save the trained pruned models in the following format:
         Config -> JSON file format
         Weights -> H5PY file format
-    Args:
-        model: Keras Model
-        filepath: Path on the system where the model is to be saved.
-        model_filename: Name string for the model
-
-    Returns:
-
+    :param model: Keras Model object
+    :param filepath: path to store the file in the directory
+    :param model_filename: name for the model
+    :return: None
     """
     # serialize model to JSON
     model_json = model.to_json()
@@ -42,13 +36,10 @@ def loading_trained_model(filepath='',
                          custom_objects=None):
     """
     Helper function to load the trained models USING THE CUSTOM LAYER from the models directory.
-    Args:
-        filepath: Path to the folder/ directory where the model is stored
-        model_filename: Name of the file.
-        custom_objects: List of custom layer objects used in the model so that they can be loaded using the config.
-
-    Returns:
-        loaded_model: Keras Model loaded from the file.
+    :param filepath: Path to the folder/ directory where the model is stored
+    :param model_filename: Name of the file.
+    :param custom_objects: List of custom layer objects used in the model so that they can be loaded using the config.
+    :return: Keras Model loaded from the file.
     """
     try:
         model_path = filepath + "/" + model_filename + ".json"
@@ -134,75 +125,3 @@ def __layer_statistics__(layer_weights):
              }
     print(pd.DataFrame.from_dict(stats, orient="index", columns=["measure"]))
 
-def __generate_delta_plots__(model,
-                             x,
-                             y,
-                             dxy,
-                             bins_y: list = [-2.0,2.0],
-                             bins_dxy: list = [-50.0,50.0],
-                             color = "red",
-                             batch_size: int = 4096,
-                             min_y_val: float = 20.):
-    """
-    Helper function to generate diff plots for the resolution of the model on the test inputs.
-    We check for the relative change in predictions for momentum and displacement when plotted against a
-    gaussian distribution that mimics the ideal fit of values.
-    Args:
-        model: The trained keras model
-        x: Test feature space
-        y: Truth values for the 1st regression output, momentum
-        dxy:Truth values for the 2nd regression output, displacement
-        color: Color for the plots generated
-        batch_size: Batch size for predictions
-        min_y_val: Minimum value for y, beyond this predictions are considered pertaining to displaced muons
-
-    Returns: None
-
-    """
-    # Predictions
-    y_test_true = y.copy()
-    y_test_true /= reg_pt_scale
-
-    y_test_sel = (np.abs(1.0 / y) >= min_y_val / reg_pt_scale)
-
-    y_test_meas_ = model.predict(x, batch_size = batch_size)
-    y_test_meas = y_test_meas_[:, 0]
-    y_test_meas /= reg_pt_scale
-    y_test_meas = y_test_meas.reshape(-1)
-
-    dxy_test_true = dxy.copy()
-    dxy_test_true /= reg_dxy_scale
-
-    # dxy_test_sel = (np.abs(dxy_test_true) >= 25)
-
-    dxy_test_meas = y_test_meas_[:, 1]
-    dxy_test_meas /= reg_dxy_scale
-    dxy_test_meas = dxy_test_meas.reshape(-1)
-
-    # Plot Delta(q/pT)/pT
-    plt.figure(figsize=(5, 5), dpi=75)
-    yy = ((np.abs(1.0 / y_test_meas) - np.abs(1.0 / y_test_true)) / np.abs(1.0 / y_test_true))
-    hist, edges, _ = plt.hist(yy, bins=100, range=(bins_y[0], bins_y[1] - eps), histtype='stepfilled', facecolor=color, alpha=0.3)
-    plt.xlabel(r'$\Delta(p_{T})_{\mathrm{meas-true}}/{(p_{T})}_{true}$ [1/GeV]')
-    plt.ylabel(r'entries')
-    logger.info('# of entries: {0}, mean: {1}, std: {2}'.format(len(yy), np.mean(yy), np.std(yy[np.abs(yy) < 0.4])))
-
-    popt = fit_gaus(hist, edges, mu=np.mean(yy), sig=np.std(yy[np.abs(yy) < 2.0]))
-    logger.info('gaus fit (a, mu, sig): {0}'.format(popt))
-    xdata = (edges[1:] + edges[:-1]) / 2
-    plt.plot(xdata, gaus(xdata, popt[0], popt[1], popt[2]), color=color)
-    plt.show()
-
-    # Plot Delta(dxy)
-    plt.figure(figsize=(5, 5), dpi=75)
-    yy = (dxy_test_meas - dxy_test_true)[y_test_sel]
-    hist, edges, _ = plt.hist(yy, bins=100, range=(bins_dxy[0],bins_dxy[1]), histtype='stepfilled', facecolor=color, alpha=0.3)
-    plt.xlabel(r'$\Delta(d_{0})_{\mathrm{meas-true}}$ [cm]')
-    plt.ylabel(r'entries')
-    logger.info('# of entries: {0}, mean: {1}, std: {2}'.format(len(yy), np.mean(yy), np.std(yy)))
-
-    popt = fit_gaus(hist, edges, mu=np.mean(yy), sig=np.std(yy))
-    logger.info('gaus fit (a, mu, sig): {0}'.format(popt))
-    xdata = (edges[1:] + edges[:-1]) / 2
-    plt.plot(xdata, gaus(xdata, popt[0], popt[1], popt[2]), color=color)
-    plt.show()

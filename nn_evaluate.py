@@ -50,8 +50,8 @@ class evaluate:
         y_test = model.predict(self.X,batch_size = batch_size)
         y_test_meas = y_test[:,0]
         dxy_test_meas = y_test[:,1]
-        y_test_meas = self.recalibrate(y_test_meas,reg_pt_scale)
-        dxy_test_meas = self.recalibrate(dxy_test_meas,reg_dxy_scale)
+        y_test_meas = self.recalibrate(y_test_meas,REG_PT_SCALE)
+        dxy_test_meas = self.recalibrate(dxy_test_meas,REG_DXY_SCALE)
 
         y_test_meas = y_test_meas.reshape(-1)
         dxy_test_meas = dxy_test_meas.reshape(-1)
@@ -60,7 +60,7 @@ class evaluate:
 
     def get_error(self,y_predicted,ctype = "y"):
         if ctype == "y":
-            y_test_true = self.recalibrate(self.y,reg_pt_scale)
+            y_test_true = self.recalibrate(self.y,REG_PT_SCALE)
             if self.metric_type == "RMSE":
                 return self.rmse(self.inverse(y_test_true),self.inverse(y_predicted))
             elif self.metric_type == "MAE":
@@ -70,7 +70,8 @@ class evaluate:
             else:
                 NameError("type variable can only assume following values: RMSE, MAE, MAPE. It is case-sensitive")
         else:
-            dxy_test_true = self.recalibrate(self.dxy, reg_dxy_scale)
+            dxy_test_true = self.recalibrate(self.dxy, REG_DXY_SCALE)
+            dxy_test_true = self.recalibrate(self.dxy, REG_DXY_SCALE)
             if self.metric_type == "RMSE":
                 return self.rmse(dxy_test_true,y_predicted)
             elif self.metric_type == "MAE":
