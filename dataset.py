@@ -2,7 +2,6 @@ import numpy as np
 from nn_globals import *
 from sklearn.model_selection import train_test_split
 
-
 def _handle_nan_in_x (x) :
     """
     :param x: Input array suspected to contain NaNs
@@ -23,9 +22,12 @@ def _handle_nan_in_x (x) :
 #         if (x [i , 0] != 0.0) : x [i , 18] = x [i , 18] + 1
 #     return x
 
-def muon_data(filename, reg_pt_scale=1.0,
+def muon_data(filename,
+              reg_pt_scale=1.0,
               reg_dxy_scale=1.0,
-              correct_for_eta=False):
+              nvariables: int = 23 ,
+              nentries: int = 100000000
+              ):
     try:
         logger.info('Loading muon data from {0} ...'.format(filename))
         loaded = np.load(filename)
@@ -49,22 +51,25 @@ def muon_data(filename, reg_pt_scale=1.0,
     the_parameters = the_parameters[mask]
     assert(the_variables.shape[0] == the_parameters.shape[0])
 
-    x = the_variables[:,0:23]
+    x = the_variables[:,0:nvariables]
     y = reg_pt_scale*the_parameters[:,0]
     phi = the_parameters[:,1]
-    #eta = the_parameters[:,2]
     vx = the_parameters[:,3]
     vy = the_parameters[:,4]
-    #vz = the_parameters[:,5]
-    dxy = vy * np.cos(phi) - vx * np.sin(phi)
+    dxy = reg_dxy_scale*(vy * np.cos(phi) - vx * np.sin(phi))
     logger.info('Loaded the encoded variables with shape {0}'.format(x.shape))
     logger.info('Loaded the encoded parameters with shape {0}'.format(y.shape))
 
     return x, y, dxy
 
 
-def muon_data_split (filename , reg_pt_scale=1.0 , reg_dxy_scale=1.0 , test_size=0.5,
-                     batch_size=128) :
+def muon_data_split (filename:str ,
+                     reg_pt_scale:float=1.0 ,
+                     reg_dxy_scale:float=1.0 ,
+                     test_size:float=0.5,
+                     batch_size:int=128,
+                     nvariables:int = 23,
+                     nentries:int =  100000) :
     """
     Function to preprocess the raw data input from .npz file and divide it into train-test splits.
     :param filename: Absolute address of the .npz file
@@ -76,7 +81,9 @@ def muon_data_split (filename , reg_pt_scale=1.0 , reg_dxy_scale=1.0 , test_size
     """
     x , y , dxy = muon_data (filename ,
                              reg_pt_scale=reg_pt_scale ,
-                             reg_dxy_scale=reg_dxy_scale)
+                             reg_dxy_scale=reg_dxy_scale,
+                             nvariables=nvariables,
+                             nentries=nentries)
 
     if test_size :
 
