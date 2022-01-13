@@ -397,3 +397,122 @@
 2022-01-11 11:15:19,442 [INFO    ] gaus fit (a, mu, sig): [5.93053392e+04 2.59689338e-03 2.27387447e-01]
 2022-01-11 11:15:19,674 [INFO    ] # of entries: 150253, mean: 0.05408358332716961, std: 10.000876111176593
 2022-01-11 11:15:19,676 [INFO    ] gaus fit (a, mu, sig): [ 1.01955829e+04 -1.97576655e-02  5.25735096e+00]
+2022-01-11 11:25:25,972 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-11 11:25:36,383 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-11 11:25:36,384 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-11 11:25:48,937 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-11 11:25:48,940 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-11 11:26:11,947 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-11 11:26:22,257 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-11 11:26:22,259 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-11 11:26:34,826 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-11 11:26:34,829 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-11 11:26:53,411 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2022-01-11 11:26:53,434 [INFO    ] gaus fit (a, mu, sig): [1.35198823e+06 1.60741261e-04 3.58175217e-01]
+2022-01-11 11:26:53,686 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2022-01-11 11:26:53,688 [INFO    ] gaus fit (a, mu, sig): [ 3.12839337e+03 -1.80426947e-01 -4.81515431e+00]
+2022-01-11 11:27:09,845 [INFO    ] # of entries: 3284620, mean: 0.04249732642478677, std: 0.18463903659635786
+2022-01-11 11:27:09,868 [INFO    ] gaus fit (a, mu, sig): [1.72080926e+05 6.53609836e-03 2.50802381e-01]
+2022-01-11 11:27:10,042 [INFO    ] # of entries: 477217, mean: -0.12754184089952086, std: 10.251226219050828
+2022-01-11 11:27:10,045 [INFO    ] gaus fit (a, mu, sig): [ 2.92398123e+04 -1.93164363e-01  5.91321329e+00]
+2022-01-11 11:28:19,836 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-11 11:28:29,557 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-11 11:28:29,559 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-11 11:28:40,930 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-11 11:28:40,932 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-11 11:28:41,323 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2022-01-11 11:28:41,324 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2022-01-11 11:28:41,324 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2022-01-11 11:28:41,324 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2022-01-11 11:28:41,324 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2022-01-11 11:28:41,449 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-11 11:28:41,455 [INFO    ] Begin training ...
+2022-01-11 12:41:55,212 [INFO    ] Done training. Time elapsed: 1:13:13.757490 sec
+2022-01-11 12:41:55,218 [INFO    ] Epoch 300/300 - loss: 11.024825096130371 - val_loss: 10.895198822021484
+2022-01-11 12:55:13,050 [INFO    ] # of entries: 1034656, mean: 0.08315600872464401, std: 0.19217352066988358
+2022-01-11 12:55:13,061 [INFO    ] gaus fit (a, mu, sig): [ 4.48998590e+04 -5.38878146e-03  3.15806505e-01]
+2022-01-11 12:55:13,242 [INFO    ] # of entries: 149864, mean: 0.04764988229440721, std: 10.949051884836331
+2022-01-11 12:55:13,244 [INFO    ] gaus fit (a, mu, sig): [8.53394487e+03 1.07184109e-01 6.36424046e+00]
+2022-01-11 12:55:26,634 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-11 12:55:26,663 [INFO    ] Begin training ...
+2022-01-11 15:26:24,857 [INFO    ] Done training. Time elapsed: 2:30:58.193277 sec
+2022-01-11 15:26:24,868 [INFO    ] Epoch 300/300 - loss: 11.066375732421875 - val_loss: 10.834067344665527
+2022-01-11 15:26:27,576 [INFO    ] # of entries: 1034656, mean: 0.0674154673186949, std: 0.19201467368027308
+2022-01-11 15:26:27,588 [INFO    ] gaus fit (a, mu, sig): [4.54958459e+04 4.80287154e-03 3.10106413e-01]
+2022-01-11 15:26:27,693 [INFO    ] # of entries: 149864, mean: 0.06915829709005819, std: 10.829525913421858
+2022-01-11 15:26:27,694 [INFO    ] gaus fit (a, mu, sig): [8.63501645e+03 1.49583147e-01 6.28394557e+00]
+2022-01-11 15:30:24,474 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-11 15:30:24,563 [INFO    ] Begin training ...
+2022-01-11 16:45:05,130 [INFO    ] Done training. Time elapsed: 1:14:40.566076 sec
+2022-01-11 16:45:05,146 [INFO    ] Epoch 300/300 - loss: 47.44121170043945 - val_loss: 47.41973114013672
+2022-01-11 16:45:08,069 [INFO    ] # of entries: 1034656, mean: 278.7615268260545, std: 0.23110688341962277
+2022-01-11 16:47:12,367 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-11 16:47:12,404 [INFO    ] Begin training ...
+2022-01-11 16:50:18,014 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-11 16:50:18,076 [INFO    ] Begin training ...
+2022-01-11 16:50:24,142 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-11 16:50:24,164 [INFO    ] Begin training ...
+2022-01-11 19:18:37,914 [INFO    ] Done training. Time elapsed: 2:28:13.749738 sec
+2022-01-11 19:18:37,930 [INFO    ] Epoch 300/300 - loss: 10.740618705749512 - val_loss: 10.46129322052002
+2022-01-11 19:18:41,202 [INFO    ] # of entries: 1034656, mean: 0.04872230097123355, std: 0.18677842831551852
+2022-01-11 19:18:41,220 [INFO    ] gaus fit (a, mu, sig): [ 5.22447713e+04 -1.05662438e-02  2.61796697e-01]
+2022-01-11 19:18:41,353 [INFO    ] # of entries: 149864, mean: -0.2786651528813812, std: 10.9846716990604
+2022-01-11 19:18:41,354 [INFO    ] gaus fit (a, mu, sig): [ 8.43505192e+03 -3.84070478e-01  6.39581352e+00]
+2022-01-12 10:24:06,967 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-12 10:24:16,745 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-12 10:24:16,748 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-12 10:24:27,795 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-12 10:24:27,797 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-12 10:24:28,295 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2022-01-12 10:24:28,295 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2022-01-12 10:24:28,295 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2022-01-12 10:24:28,296 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2022-01-12 10:24:28,296 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2022-01-12 10:29:15,268 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-12 10:30:13,495 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-12 10:30:13,500 [INFO    ] Begin training ...
+2022-01-12 11:17:43,355 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-12 11:17:53,004 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-12 11:17:53,006 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-12 11:18:04,175 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-12 11:18:04,177 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-12 11:18:04,658 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2022-01-12 11:18:04,658 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2022-01-12 11:18:04,659 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2022-01-12 11:18:04,659 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2022-01-12 11:18:04,659 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2022-01-12 11:18:12,619 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-12 11:18:21,963 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-12 11:18:21,964 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-12 11:18:32,992 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-12 11:18:32,995 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-12 11:18:33,482 [INFO    ] Loaded # of training and testing events: (2249964, 1034656)
+2022-01-12 11:18:33,482 [WARNING ] The last batch for training could be too few! (2024967%128)=7. Please change test_size.
+2022-01-12 11:18:33,482 [WARNING ] Try this formula: int(int(3284620*0.685)*0.9) % 128
+2022-01-12 11:18:33,483 [WARNING ] The last batch for training after mixing could be too few! (4049935%128)=15. Please change test_size.
+2022-01-12 11:18:33,483 [WARNING ] Try this formula: int(int(3284620*0.685)*2*0.9) % 128
+2022-01-12 11:20:11,359 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-12 11:20:11,365 [INFO    ] Begin training ...
+2022-01-12 11:20:34,334 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-12 11:20:34,340 [INFO    ] Begin training ...
+2022-01-12 12:21:49,536 [INFO    ] Done training. Time elapsed: 1:01:15.196464 sec
+2022-01-12 12:26:45,070 [INFO    ] # of entries: 1034656, mean: 0.10044314065360556, std: 0.1959956573293534
+2022-01-12 12:26:45,082 [INFO    ] gaus fit (a, mu, sig): [4.06065479e+04 1.91301783e-02 3.56592688e-01]
+2022-01-12 12:26:45,301 [INFO    ] # of entries: 150336, mean: 0.31988006768614335, std: 18.270854970811037
+2022-01-12 12:26:45,302 [INFO    ] gaus fit (a, mu, sig): [6.99167651e+03 1.30032332e+00 6.56326911e+00]
+2022-01-12 12:26:59,086 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-12 12:26:59,105 [INFO    ] Begin training ...
+2022-01-12 13:22:33,331 [INFO    ] Done training. Time elapsed: 0:55:34.224957 sec
+2022-01-12 13:22:33,338 [INFO    ] Epoch 154/154 - loss: 13.279383659362793 - val_loss: 13.223259925842285
+2022-01-12 13:30:37,000 [INFO    ] # of entries: 1034656, mean: 0.04803786808477386, std: 0.19722890038025687
+2022-01-12 13:30:37,011 [INFO    ] gaus fit (a, mu, sig): [4.07169655e+04 6.57680357e-03 3.63692059e-01]
+2022-01-12 13:30:37,094 [INFO    ] # of entries: 150336, mean: -0.9730089873547351, std: 18.243758483089678
+2022-01-12 13:30:37,096 [INFO    ] gaus fit (a, mu, sig): [ 6.68899319e+03 -1.54035974e+00  7.02511988e+00]
+2022-01-12 13:37:44,915 [INFO    ] Training model with l1_reg: 0.0 l2_reg: 0.0
+2022-01-12 13:37:44,973 [INFO    ] Begin training ...
+2022-01-12 13:56:29,679 [INFO    ] Done training. Time elapsed: 0:18:44.705806 sec
+2022-01-12 13:56:29,683 [INFO    ] Epoch 52/52 - loss: 13.303789138793945 - val_loss: 13.24991226196289
+2022-01-12 13:56:37,581 [INFO    ] # of entries: 1034656, mean: 0.02706455695860494, std: 0.19501568248208578
+2022-01-12 13:56:37,598 [INFO    ] gaus fit (a, mu, sig): [ 4.22548298e+04 -2.62976076e-02  3.45261503e-01]
+2022-01-12 13:56:37,746 [INFO    ] # of entries: 150336, mean: -1.0915630611214449, std: 18.00020187466566
+2022-01-12 13:56:37,748 [INFO    ] gaus fit (a, mu, sig): [ 6.93089986e+03 -1.29036498e+00  6.80605342e+00]
