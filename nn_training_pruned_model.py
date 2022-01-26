@@ -5,7 +5,6 @@ from numpy import ndarray
 from nn_evaluate import huber_loss
 from nn_build_prunable_model import CustomModel
 
-
 def generate_pruning_mask (k_weights ,
                            k_sparsity ,
                            pruning_type="unstructured") :

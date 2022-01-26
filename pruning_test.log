@@ -1,0 +1,13 @@
+2022-01-26 09:56:44,170 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-26 09:56:44,172 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2022-01-26 09:57:43,412 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-26 09:57:43,413 [ERROR   ] Failed to load data from file: ./data/NN_input_params_FlatXYZ.npz
+2022-01-26 09:59:19,938 [INFO    ] Loading muon data from ./data/NN_input_params_FlatXYZ.npz ...
+2022-01-26 09:59:29,489 [INFO    ] Loaded the variables with shape (19300000, 25)
+2022-01-26 09:59:29,499 [INFO    ] Loaded the parameters with shape (19300000, 6)
+2022-01-26 09:59:40,655 [INFO    ] Loaded the encoded variables with shape (3284620, 23)
+2022-01-26 09:59:40,657 [INFO    ] Loaded the encoded parameters with shape (3284620,)
+2022-01-26 09:59:49,278 [INFO    ] # of entries: 3284620, mean: 0.04667046659834623, std: 0.18385446232232602
+2022-01-26 09:59:49,304 [INFO    ] gaus fit (a, mu, sig): [1.73543164e+05 6.90561793e-03 2.46988691e-01]
+2022-01-26 09:59:49,510 [INFO    ] # of entries: 477217, mean: 0.7771820962272749, std: 10.247388385745875
+2022-01-26 09:59:49,512 [INFO    ] gaus fit (a, mu, sig): [3.02985756e+04 8.11024989e-01 5.67178312e+00]

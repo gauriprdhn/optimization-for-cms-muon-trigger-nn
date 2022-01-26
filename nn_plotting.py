@@ -171,3 +171,21 @@ def __generate_delta_plots__(model,
         return (mu_yy, sig_yy, mu_dxyy, sig_dxyy)
     else:
         return None
+
+def __plot_dist__(weights, title="", color="purple", alpha=0.5):
+    """
+    Helper function to plot the distribution of layer weights.
+    Args:
+        weights: Input numpy array of layer weights
+        title: Title for the plot
+        color: Color for the plot
+        alpha: Intensity of the color.
+
+    Returns: None
+
+    """
+    w = np.ndarray.flatten(weights)
+    plt.figure(figsize=(5, 5), dpi=75)
+    plt.hist(w, color=color, alpha=alpha,bins=100)
+    plt.title("weights for layer " + title)
+    plt.show()

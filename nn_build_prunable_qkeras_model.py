@@ -67,12 +67,12 @@ class CustomQModel :
         x = QActivation (activation = activationQuantizer ,
                          name = "act_3") (x)
 
-        x = QDense (output_dim ,
-                    kernel_quantizer = kernelQuantizer ,
-                    kernel_initializer = initializer ,
-                    kernel_regularizer = regularizer ,
-                    use_bias = True ,
-                    name = "dense-output") (x)
+        x = QDense ( output_dim ,
+                     kernel_quantizer = kernelQuantizer ,
+                     kernel_initializer = initializer ,
+                     kernel_regularizer = regularizer ,
+                     use_bias = True ,
+                     name = "dense-output" )(x)
         outputs = Activation (finalActivation , name = "final-activation") (x)
 
         model = Model (inputs = inputs ,

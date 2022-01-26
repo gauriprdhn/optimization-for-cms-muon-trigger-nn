@@ -3,9 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from keras.models import  model_from_json
 from tensorflow.keras.utils import custom_object_scope
+from qkeras import utils
 
-# global variables
-# plt.style.use('tdrstyle.mplstyle')
 eps = 1e-7
 my_cmap = plt.cm.viridis
 my_cmap.set_under('w',1)
@@ -31,39 +30,84 @@ def saving_model(model,
     model.save_weights(filepath + "/" + model_filename + "_weights.h5")
     print("Saved model to disk")
 
-def loading_trained_model(filepath='',
-                         model_filename='model',
-                         custom_objects=None):
+# def loading_trained_model(filepath='',
+#                          model_filename='model',
+#                          custom_objects=None):
+#     """
+#     Helper function to load the trained models USING THE CUSTOM LAYER from the models directory.
+#     :param filepath: Path to the folder/ directory where the model is stored
+#     :param model_filename: Name of the file.
+#     :param custom_objects: List of custom layer objects used in the model so that they can be loaded using the config.
+#     :return: Keras Model loaded from the file.
+#     """
+#     try:
+#         model_path = filepath + "/" + model_filename + ".json"
+#         print(model_path)
+#         model_weights_path = filepath + "/" + model_filename + "_weights.h5"
+#         print(model_weights_path)
+#         with open(model_path, 'r') as f:
+#             loaded_model_json = f.read()
+#         f.close()
+#         if custom_objects:
+#             with custom_object_scope(custom_objects):
+#                 loaded_model = model_from_json(loaded_model_json)
+#             # load weights into new model
+#             loaded_model.load_weights(model_weights_path)
+#         else:
+#             loaded_model = model_from_json (loaded_model_json)
+#             # load weights into new model
+#             loaded_model.load_weights (model_weights_path)
+#         print("Loaded model from disk")
+#
+#         return loaded_model
+#
+#     except:
+#         print("ERROR: The model doesn't exist at the address provided.")
+
+def loading_trained_model ( filepath = '' ,
+                            model_filename = 'model' ,
+                            custom_objects = None ,
+                            is_quantized = False ) :
     """
     Helper function to load the trained models USING THE CUSTOM LAYER from the models directory.
     :param filepath: Path to the folder/ directory where the model is stored
     :param model_filename: Name of the file.
     :param custom_objects: List of custom layer objects used in the model so that they can be loaded using the config.
-    :return: Keras Model loaded from the file.
+    :param is_quantized: Enables use of qkeras library to load the quantized model
+    :return: Model object loaded from the file.
     """
-    try:
+    if is_quantized :
+        qkeras_file = filepath + "/" + model_filename + ".h5"
+        qkeras_weights_file = filepath + "/" + model_filename + "_weights.h5"
+        if custom_objects :
+            loaded_qmodel = utils.load_qmodel ( filepath = qkeras_file )
+            loaded_qmodel.load_weights ( qkeras_weights_file )
+        else :
+            loaded_qmodel = utils.load_qmodel ( filepath = qkeras_file , custom_objects = custom_objects )
+            loaded_qmodel.load_weights ( qkeras_weights_file )
+
+        print ( "Loaded quantized model from disk" )
+        return loaded_qmodel
+    else :
         model_path = filepath + "/" + model_filename + ".json"
-        print(model_path)
+        print ( model_path )
         model_weights_path = filepath + "/" + model_filename + "_weights.h5"
-        print(model_weights_path)
-        with open(model_path, 'r') as f:
-            loaded_model_json = f.read()
-        f.close()
-        if custom_objects:
-            with custom_object_scope(custom_objects):
-                loaded_model = model_from_json(loaded_model_json)
+        print ( model_weights_path )
+        with open ( model_path , 'r' ) as f :
+            loaded_model_json = f.read ( )
+        f.close ( )
+        if custom_objects :
+            with custom_object_scope ( custom_objects ) :
+                loaded_model = model_from_json ( loaded_model_json )
             # load weights into new model
-            loaded_model.load_weights(model_weights_path)
-        else:
-            loaded_model = model_from_json (loaded_model_json)
+            loaded_model.load_weights ( model_weights_path )
+        else :
+            loaded_model = model_from_json ( loaded_model_json )
             # load weights into new model
-            loaded_model.load_weights (model_weights_path)
-        print("Loaded model from disk")
+            loaded_model.load_weights ( model_weights_path )
 
+        print ( "Loaded model from disk" )
         return loaded_model
-
-    except:
-        print("ERROR: The model doesn't exist at the address provided.")
 
 def __get_weights__(model, layer_type="dense"):
     """
@@ -84,24 +128,6 @@ def __get_weights__(model, layer_type="dense"):
         for layer in model.layers:
             weights[layer.name] = layer.get_weights()
     return weights
-
-def __plot_dist__(weights, title="", color="purple", alpha=0.5):
-    """
-    Helper function to plot the distribution of layer weights.
-    Args:
-        weights: Input numpy array of layer weights
-        title: Title for the plot
-        color: Color for the plot
-        alpha: Intensity of the color.
-
-    Returns: None
-
-    """
-    w = np.ndarray.flatten(weights)
-    plt.figure(figsize=(5, 5), dpi=75)
-    plt.hist(w, color=color, alpha=alpha)
-    plt.title("weights for layer " + title)
-    plt.show()
 
 def __layer_statistics__(layer_weights):
     """
